@@ -1,0 +1,606 @@
+/*
+NERD Colors
+Green           #5ccf18
+Green light     #a1db7e
+Pink            #ff3369
+Pink light      #e0699a
+Purple          #500092
+Purple light    #8302ee
+Orange          #f0852d
+
+*/
+
+
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: gilroyextrabold, sans-serif;
+}
+
+/*
+colors for reference from NERD logo
+orange (N): #f0852d
+green (E): #50a83e
+pink (R): #db5e8f
+purple (D): #6E11D0
+*/
+.orange-text  {
+    color: #f0852d;
+}
+.orange-background  {
+    background-color: #f0852d;
+    color: #fff;
+}
+.green-text  {
+    color: #50a83e;
+}
+.green-background  {
+    background-color: #50a83e;
+    color: #fff;
+}
+.pink-text  {
+    color: #db5e8f;
+}
+a.pink-text {
+    color: #db5e8f;
+}
+.menu-links.pink-text {
+    color: #db5e8f !important;
+}
+.pink-background  {
+    background-color: #db5e8f;
+    color: #fff;
+}
+.purple-text  {
+    color: #6E11D0;
+}
+.purple-background  {
+    background-color: #6E11D0;
+    color: #fff;
+}
+
+
+body {
+    background-color: #fffb83;
+}
+.row {
+    max-width: 100%;
+}
+.vertical-spacer {
+    height: 30px;
+}
+/*top nav region*/
+.title-bar {
+    padding: 1.5rem;
+}
+.title-bar.sticky {
+    padding-top: 35px;
+    background-color: #fffb83;
+}
+.title-bar.sticky.is-at-top.is-stuck {
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.header-logo {
+    display: inline-block;
+    margin-left: 75px;
+}
+.main-menu {
+    display: inline-block;
+    float: right;
+    margin-right: 50px;
+}
+.menu-links {
+    color: #272223;
+    font-size: 20px;
+}
+.menu-links:hover {
+    color: #ffaf00;
+}
+
+.section-header {
+    font-size: 144px;
+    line-height: 144px;
+    text-align: center;
+    letter-spacing: -7px;
+}
+
+.section-header span {
+    display: block;
+    line-height: 109px;
+    /*margin-bottom: 27px;*/
+}
+.banner-text {
+    max-width: 900px;
+    margin: 27px auto 0;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: -0.4px;
+}
+.date {
+    font-size: 48px;
+    letter-spacing: -1px;
+    text-align: center;
+    margin: 18px auto 0;
+    line-height: 0.73;
+}
+
+.button-container {
+    margin-top: 42px;
+    text-align: center;
+
+}
+.button {
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    border-radius: 100px;
+}
+.button:hover {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .2);
+}
+.image-container {
+    text-align: center;
+}
+.summit-section {
+    background-color: #fffb83;
+    color: #6e11cc;
+}
+/*.summit-section img {*/
+    /*width: 158px;*/
+    /*height: 119px;*/
+/*}*/
+.summit-section .button-container {
+    margin-bottom: 132px;
+}
+.session-submit,
+.session-submit:hover {
+    background-color: #6E11D0;
+    color: #ffffff;
+}
+.donate-submit,
+.donate-submit:hover {
+    color: #ffffff;
+    background-color: #db5e8f;
+}
+
+.about-section {
+    background: url("../images/about-b-g@2x.jpg") bottom center no-repeat ;
+
+}
+.about-section .section-header {
+    color: #fffb83;
+    margin-top: 350px;
+}
+.about-section .banner-text {
+    color: #fff;
+    margin-bottom: 290px;
+}
+
+.join-section {
+    background-color: #7bf5ff;
+    color: #272223;
+}
+.join-section .button-container {
+    margin-bottom: 132px;
+}
+.join-section .image-container {
+    margin: 155px 0 -15px;
+}
+.join-button,
+.join-button:hover {
+    background-color: #fff;
+    color: #272223;
+}
+
+.sponsor-section {
+    background-color: #fff;
+}
+.sponsor-section .section-header {
+    font-size: 72px;
+    letter-spacing: -3.5px;
+    color: #89e376;
+    margin-top: 48px;
+}
+.sponsor-section .sponsors {
+    text-align: center;
+}
+.sponsor-button ,
+.sponsor-button:hover {
+    /*background-color: #89e376;*/
+    background-color:  #6E11D0;
+}
+.sponsor-section .button-container {
+    margin-bottom: 119px;
+}
+.sponsors img {
+    margin: 10px;
+}
+
+.schedule-button ,
+.schedule-button:hover {
+    background-color: #6e11cc;
+}
+
+footer {
+    background-color: #6e11cc;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    clear: both;
+}
+.footer-logo {
+    padding: 37px 0 26px 0;
+}
+.code-conduct,
+.code-conduct:hover {
+    font-size: 12px;
+    color: #fff;
+}
+.social-media-links {
+    padding: 23px 0 37px 0;
+}
+.social-icon {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+@media screen and (max-width: 768px) {
+    .main-menu {
+        display: none;
+    }
+}
+
+.location {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+}
+.location a {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    display: inline-block;
+    background-color: #500092;
+    padding: 0px 5px 0px 5px;
+}
+.location h2 {
+    color: #500092;
+    font-size: 72px;
+}
+
+/* #sessions is the div that sessions are inside of */
+
+/*
+NERD Colors
+Green           #5ccf18
+Green light     #a1db7e
+Pink            #ff3369
+Pink light      #e0699a
+Purple          #500092
+Purple light    #8302ee
+*/
+
+.purple {
+    color: #500092;
+}
+
+#sessions {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+.sessions {
+    width: 100%;
+    margin: 27px auto 0;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: -0.4px;
+    color: #5f5f5f;
+}
+@media (min-width: 960px) {
+    .sessions {
+        width: 80%;
+    }
+}
+.sessions .timeslot {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 15px;
+}
+.sessions .more-info {
+    width: 330px;
+    margin: auto;
+    padding: 0px 10px 5px 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.saturday .more-info {
+    background-color: #5ccf18
+}
+.sunday .more-info {
+    background-color: #ff3369
+}
+
+.sessions .timeslot #Saturday,
+.sessions .timeslot #Sunday {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    /*padding: 0 20px 0 20px;*/
+}
+
+.session {
+    margin-top: 15px;
+    width: 100%;
+}
+@media (min-width: 960px) {
+    .session {
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) {
+    .session {
+        width: 33.3333%;
+    }
+}
+.session .top {
+    margin-bottom: 10px;
+}
+.session .top,
+.session .info {
+    width:95%;
+    margin: auto;
+    text-align: left;
+}
+.session .title {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+}
+.session .name {
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+    margin-top: 15px;
+}
+.session .speaker,
+.session .room {
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
+}
+.session .speaker {
+    text-transform: uppercase;
+}
+
+.session .info {
+    background-color: #FFFFFF;
+    padding: 5px;
+    display: none;
+}
+
+.more-info {
+    color: #000000;
+}
+
+.saturday .inner {
+    background-color: #a1db7e;
+    margin: 0 10px 0 10px;
+}
+.sunday .inner {
+    background-color: #e0699a;
+    margin: 0 10px 0 10px;
+}
+
+.sessions-section {
+    background: #fffb83;
+    padding-bottom: 30px;
+}
+
+.sessions-section h2.section-header {
+    font-size: 72px;
+    letter-spacing: -3.5px;
+    margin-top: 48px;
+    color: #500092;
+}
+.sessions h3 {
+    line-height: normal;
+    color: #6e11cc;
+    font-size: 2.5rem;
+}
+
+.sessions h3.day {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    color: #FFF;
+}
+.sessions .saturday {
+    background-color: #5ccf18;
+}
+.sessions .sunday {
+    background-color: #ff3369;
+    margin-top: 20px;
+}
+.sessions .saturday h3.day {
+    background-color: #5ccf18;
+}
+.sessions .sunday h3.day {
+    background-color: #ff3369;
+}
+
+.sessions h4 {
+    line-height: normal;
+    color: #000000;
+}
+.sessions .time {
+    display: block;
+    width: 100%;
+    margin: auto;
+    line-height: normal;
+    font-size: 1.5rem;
+    color: #FFF;
+    padding: 10px 0 10px 0;
+    /*margin-bottom: 10px;*/
+    text-align: center;
+}
+.sessions .saturday .time {
+    background-color: #5ccf18;
+}
+.sessions .sunday .time {
+    background-color: #ff3369;
+}
+.session .time img {
+    width: 50px;
+    float: right;
+    margin-top: -21px;
+}
+
+img.lil-nerdy-sessions {
+    width: 50px;
+    float: right;
+    margin-top: -65px;
+    margin-right: 10px;
+}
+@media (min-width: 960px) {
+    img.lil-nerdy-sessions {
+        width: 80px;
+        float: right;
+        margin-top: -85px;
+        margin-right: 10px;
+    }
+}
+
+.session .room {
+    width: 200px;
+    margin: auto;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.session .room {
+    width: 150px;
+    margin: auto;
+    padding: 0px 10px 5px 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: -8px;
+}
+.saturday .room {
+    background-color: #5ccf18
+}
+.sunday .room {
+    background-color: #ff3369
+}
+
+.session .tags {
+    color: #000000;
+}
+
+.session .top:hover {
+    cursor: pointer;
+}
+
+
+
+/*feedback section */
+.feedback-section {
+    padding: 30px 0px;
+}
+.feedback-section #wufoo-zdba2fr0eelak3 {
+    width: 100%;
+}
+@media screen and (min-width: 768px) {
+    .feedback-section #wufoo-zdba2fr0eelak3 {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+.code {
+    text-align: left;
+    width: 80%;
+    margin: auto;
+}
+img.app {
+    width: auto;
+}
+img.appsmall {
+    width: 200px;
+    height: auto;
+}
+
+.keynotes-container {
+    margin-top: 40px;
+}
+.keynotes {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-around;
+}
+.keynotes img {
+    width: 100%;
+}
+
+.location-section {
+    background: #ff3369;
+    color: #FFFFFF;
+}
+
+.location-section h2 {
+    color: #FFFFFF;
+}
+
+.help-section {
+background: #ff3369;
+    color: #FFFFFF;
+}
+
+.help-section h2 {
+    font-size: 72px;
+    color: #FFFFFF;
+}
+
+.team-section {
+background: #500092;
+    color: #FFFFFF;
+    padding-bottom: 30px;
+}
+
+.team-section h2 {
+    font-size: 72px;
+    color: #FFFFFF;
+}
+#team-container {
+    width: 80%;
+    margin: auto;
+    color: #FFFFFF;
+}
+
+@media (min-width: 960px) {
+    #team-container {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        color: #FFFFFF;
+    }
+}
+
+.first, .second, .third {
+    //width: 30%;
+    flex-grow: 1;
+}

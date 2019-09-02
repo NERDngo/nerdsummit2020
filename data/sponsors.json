@@ -1,0 +1,75 @@
+[
+  {
+    "level": "Platinum",
+    "sponsors": [
+      {
+        "sponsor": "UMass College of Natural Science",
+        "logo": "CNS-wordmark.jpg"
+      },
+      {
+        "sponsor": "Last Call Media",
+        "logo": "lcm-platinum.png"
+      }
+    ]
+  },
+  {
+    "level": "Gold",
+    "sponsors": [
+      {
+        "sponsor": "Common Media",
+        "logo": "cmi.jpg"
+      }
+    ]
+  },
+  {
+    "level": "Silver",
+    "sponsors": [
+      {
+        "sponsor": "Baypath University",
+        "logo": "baypath-sponsor.jpg"
+      },
+      {
+        "sponsor": "Big Vodoo",
+        "logo": "bigvoodoologo.jpg"
+      },
+      {
+        "sponsor": "Paragon Digital",
+        "logo": "ParagonDigital.jpg"
+      }
+    ]
+  },
+  {
+    "level": "Bronze",
+    "sponsors": [
+      {
+        "sponsor": "Carv.io",
+        "logo": "carv-logo-beta.jpg"
+      }
+    ]
+  },
+  {
+    "level": "Community",
+    "sponsors": [
+      {
+        "sponsor": "Softescu",
+        "logo": "softescu.png"
+      },
+      {
+        "sponsor": "FIT Solutions",
+        "logo": "fit-logo-2019.jpg"
+      },
+      {
+        "sponsor": "Just Peachy",
+        "logo": "just-peachy.jpg"
+      },
+      {
+        "sponsor": "Aquia",
+        "logo": "acquia-logo.png"
+      },
+      {
+        "sponsor": "UMass College of Information and Computer Sciences",
+        "logo": "UMass_CICS.jpg"
+      }
+    ]
+  }
+]

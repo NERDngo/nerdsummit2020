@@ -1,0 +1,13 @@
+body {
+    margin:0;
+}
+.flexslider {
+    margin: 0;
+}
+
+.flex-prev {
+    display: none !important;
+}
+.flex-next {
+    display: none !important;
+}

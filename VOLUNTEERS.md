@@ -36,5 +36,3 @@ Help presenter time slots would be:
 So for example, to do the 1:45-2:00 slot, you would need to miss last 5 min of a 1:00 talk, and the first 5 min the 2:00 talk.
 
 Session schedule:  https://nerdsummit.org/#sessions
-
-

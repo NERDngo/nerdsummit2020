@@ -37,7 +37,7 @@ app.post('/', (req, res) => {
         return res.send("406");
     }
 
-    const json = req.json();
+    const json = req.json;
 
     console.log(json);
     knex('session_blobs').insert({ json_blob: JSON.stringify(json) }).then(data => {

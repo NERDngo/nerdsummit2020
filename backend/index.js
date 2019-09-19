@@ -33,7 +33,7 @@ app.post('/', (req, res) => {
 
     const secret = req.header("X-Secret");
 
-    if (!secret || secret !== rocess.env.SECRET) {
+    if (!secret || secret !== process.env.SECRET) {
         return res.send("406");
     }
 

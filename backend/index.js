@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 app.get('/', (req, res) => {
 
     knex.from('session_blobs')
-        .select('session_blobs')
+        .select('json_blob')
         .orderBy('id', 'desc')
         .first()
         .then(data => {
@@ -26,6 +26,7 @@ app.get('/', (req, res) => {
             res.write('you get:\n')
             res.end(JSON.stringify(data, null, 2))
         })
+    // knex.table('session_blobs').columnInfo().then(data => console.log(data))
 
 })
 
@@ -36,7 +37,6 @@ app.post('/', (req, res) => {
     if (!secret || secret !== "somelongrandomstring") {
         return res.send("406");
     }
-
 
     knex('session_blobs').insert({ json_blob: req.body }).then(data => {
         res.setHeader('Content-Type', 'text/plain')

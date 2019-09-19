@@ -16,17 +16,20 @@ app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
 
-    return process.env.ENVIRONMENT;
-    knex.from('session_blobs')
-        .select('json_blob')
-        .orderBy('id', 'desc')
-        .first()
-        .then(data => {
-            console.log(data);
-            res.setHeader('Content-Type', 'text/plain')
-            res.write('you get:\n')
-            res.end(JSON.stringify(data, null, 2))
-        })
+    res.setHeader('Content-Type', 'text/plain')
+    res.write('you get:\n')
+    res.end(JSON.stringify(process.env.ENVIRONMENT, null, 2))
+    // return process.env.ENVIRONMENT;
+    // knex.from('session_blobs')
+    //     .select('json_blob')
+    //     .orderBy('id', 'desc')
+    //     .first()
+    //     .then(data => {
+    //         console.log(data);
+    //         res.setHeader('Content-Type', 'text/plain')
+    //         res.write('you get:\n')
+    //         res.end(JSON.stringify(data, null, 2))
+    //     })
     // knex.table('session_blobs').columnInfo().then(data => console.log(data))
 
 })

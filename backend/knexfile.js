@@ -47,10 +47,6 @@ module.exports = {
       user: 'pqnlifhqwzfnfz',
       password: '04b1a10579b050c962e489fad752f31ece48373afaf4ede8276ec47914d03853'
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
     migrations: {
       tableName: 'knex_migrations',
       directory: __dirname + '/knex/migrations',

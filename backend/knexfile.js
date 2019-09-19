@@ -41,7 +41,12 @@ module.exports = {
 
   production: {
     client: 'postgresql',
-    connection: 'postgres://pqnlifhqwzfnfz:04b1a10579b050c962e489fad752f31ece48373afaf4ede8276ec47914d03853@ec2-54-235-100-99.compute-1.amazonaws.com:5432/ddndkht8tt6gkb',
+    connection: {
+      host: 'ec2-54-235-100-99.compute-1.amazonaws.com',
+      database: 'ddndkht8tt6gkb',
+      user: 'pqnlifhqwzfnfz',
+      password: '04b1a10579b050c962e489fad752f31ece48373afaf4ede8276ec47914d03853'
+    },
     pool: {
       min: 2,
       max: 10

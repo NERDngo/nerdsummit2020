@@ -37,14 +37,19 @@ app.post('/', (req, res) => {
         return res.send("406");
     }
 
-    const json = req.body.data;
+    try {
+        const json = req.body;
 
-    console.log(json);
-    knex('session_blobs').insert({ json_blob: JSON.stringify(json) }).then(data => {
-        res.setHeader('Content-Type', 'text/plain')
-        res.write('you saved:\n')
-        return res.end(JSON.stringify(data, null, 2))
-    });
+        console.log(json)
+        knex('session_blobs').insert({ json_blob: JSON.stringify(json) }).then(data => {
+            res.setHeader('Content-Type', 'text/plain')
+            res.write('you saved:\n')
+            return res.end(JSON.stringify(data, null, 2))
+        });
+    }
+    catch (error) {
+        console.log(error, error.stack);
+    }
 
 
 });

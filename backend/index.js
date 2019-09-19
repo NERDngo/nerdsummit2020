@@ -38,7 +38,7 @@ app.post('/', (req, res) => {
     }
 
 
-    knex('session_blobs').insert({ session_blobs: req.body }).then(data => {
+    knex('session_blobs').insert({ json_blob: req.body }).then(data => {
         res.setHeader('Content-Type', 'text/plain')
         res.write('you saved:\n')
         res.end(JSON.stringify(data, null, 2))

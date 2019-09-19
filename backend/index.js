@@ -16,6 +16,7 @@ app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
 
+    return process.env.ENVIRONMENT;
     knex.from('session_blobs')
         .select('json_blob')
         .orderBy('id', 'desc')

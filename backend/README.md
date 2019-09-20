@@ -15,7 +15,9 @@ Heroku provides a server and database that can be used to host the express appli
     - `heroku config:set ENVIRONMENT=production`
     - `heroku config:set API_KEY=<the api key from Google>`
     - `heroku config:set SHEETS_ID=<the id of the target Sheet>`
-    - `heroku config:set SHEETS_RANGE=<the range of the Sheet cells, e.g !A:J>`
+    <!-- - `heroku config:set SHEETS_RANGE=<the range of the Sheet cells, e.g !A:J>` 
+    the exclamation mark needs to be escaped, currently hard-codeing into the app.
+    -->
 - Push a subtree to heroku `git subtree push --prefix backend heroku master`
 
 ## Google Sheets

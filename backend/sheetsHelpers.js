@@ -10,7 +10,7 @@ exports.getData = () => {
 
         sheets.spreadsheets.values.get({
             spreadsheetId: process.env.SHEETS_ID,
-            range: process.env.SHEETS_RANGE,
+            range: "!A:J",
         }, (err, res) => {
             if (err) {
                 reject(err);

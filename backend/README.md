@@ -1,15 +1,6 @@
 # Nerd Summit Heroku/Google Sheets backend
 
-The goal is to provide a backend service to serve Google Sheets data. This is composed of two parts: a Google Sheets script that will send data to the server everytime there's an update to the sheet. And an express server that receives that data, saves it to a database, and serves the most recent data as Json.
-
-## The Secret
-In order to prevent anyone from POSTing data to the server and having it serve that data on the site, we include a very simple password check. 
-
-- The Google Sheets script sends a custom header `X-Secret` with a password. 
-- In the set up of the Heroku application we set the same password as the `SECRET` environmental variable. 
-- Any POST requests that come to the server without the proper secret are promptly rejected.
-
-As long at the password remains secret and hard to guess (very long and randomized), this should serve to secure the application. In this scenario, the largest security concern is access to the Google Sheets script. If the password is hard-coded here, and can be viewed, it could be used to bypass the security and pollute the site.
+The goal is to provide a backend service to serve Google Sheets data. This is composed of two parts: a Google Sheets script that will instigate a fetch from the server everytime there's an update to the sheet. The express server fetches from Google Sheets, saves it to a database, and serves the most recent data as Json.
 
 ## Heroku
 Heroku provides a server and database that can be used to host the express application. Limits to the free account are 550 hours of "dyno hours" (this can be increased to 1000 for a verified account). It sleeps after 30 minutes of no use, and there are limits to the database size. There may be other limits that should be accounted for.
@@ -22,7 +13,16 @@ Heroku provides a server and database that can be used to host the express appli
 - Run the database migration to create the one table `heroku run knex migrate:latest`
 - Create the environmental variables:
     - `heroku config:set ENVIRONMENT=production`
-    - `heroku config:set SECRET=<alongrandomstring>`
+    - `heroku config:set API_KEY=<the api key from Google>`
+    - `heroku config:set SHEETS_ID=<the id of the target Sheet>`
+    - `heroku config:set SHEETS_RANGE=<the range of the Sheet cells, e.g !A:J>`
 - Push a subtree to heroku `git subtree push --prefix backend heroku master`
 
 ## Google Sheets
+
+### The Script
+On the Google Sheet that will server as the data source go to `Tools->Script Editor`. Paste the `googleSheetsScript.js` content into the text field and save. You will have to enable and add permissions for the script.
+
+### API Key
+The simplest way to allow the application to read from Google Sheets is to create an API key in Google's API Console. https://support.google.com/googleapi/answer/6158862?hl=en
+

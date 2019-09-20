@@ -1,4 +1,3 @@
-// const fs = require("fs")
 const knex = require('./knex/knex.js');
 
 exports.saveData = (data) => {
@@ -6,7 +5,6 @@ exports.saveData = (data) => {
     return new Promise((resolve, reject) => {
         knex('session_blobs')
             .insert({ json_blob: JSON.stringify(data) })
-            // .then(data => { console.log("what knex say: ", data); return data; })
             .then(resolve)
             .catch(reject)
     });

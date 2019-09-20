@@ -4,19 +4,18 @@ const fs = require('fs');
 
 exports.getData = () => {
 
-    const sheets = google.sheets({ version: 'v4', auth: "AIzaSyD14PpaxL3FaTojwl65hutvQeHGXmqWO-U" });
+    const sheets = google.sheets({ version: 'v4', auth: process.env.API_KEY });
 
     return new Promise((resolve, reject) => {
 
         sheets.spreadsheets.values.get({
-            spreadsheetId: '1oVic6LVoMcLRW2ymrTmL6w_0YEAPXaCzibRrFmTtlAo',
-            range: '!A:J',
+            spreadsheetId: process.env.SHEETS_ID,
+            range: process.env.SHEETS_RANGE,
         }, (err, res) => {
             if (err) {
                 reject(err);
             }
             else {
-                // console.log(res.data.values)
                 resolve(res.data.values);
             }
         })

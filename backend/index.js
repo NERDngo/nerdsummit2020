@@ -3,15 +3,15 @@ const app = express();
 const port = 3000;
 const bodyParser = require('body-parser')
 const knex = require('./knex/knex.js');
+const { getData } = require("./sheetsHelpers.js");
+const { saveData, processSheets } = require("./saveData.js");
 
 app.set("port", process.env.PORT || port);
 
 app.disable('x-powered-by');
 
-// parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
-// parse application/json
 app.use(bodyParser.json())
 
 app.get('/', (req, res) => {
@@ -21,7 +21,6 @@ app.get('/', (req, res) => {
         .orderBy('id', 'desc')
         .first()
         .then(data => {
-            console.log(data);
             res.setHeader('Content-Type', 'text/plain')
             res.write('you get:\n')
             res.end(JSON.stringify(data, null, 2))
@@ -29,29 +28,19 @@ app.get('/', (req, res) => {
 
 })
 
-app.post('/', (req, res) => {
+app.get('/initiate-fetch', (req, res) => {
 
-    const secret = req.header("X-Secret");
-
-    if (!secret || secret !== process.env.SECRET) {
-        return res.send("406");
-    }
-
-    try {
-        const json = req.body;
-
-        console.log(json)
-        knex('session_blobs').insert({ json_blob: JSON.stringify(json) }).then(data => {
-            res.setHeader('Content-Type', 'text/plain')
-            res.write('you saved:\n')
-            return res.end(JSON.stringify(data, null, 2))
-        });
-    }
-    catch (error) {
-        console.log(error, error.stack);
-    }
-
+    getData()
+        .then(processSheets)
+        .then(saveData)
+        .then(data => {
+            res.send(data)
+        })
+        .catch(err => {
+            console.log(err)
+            res.send("Error at the end: ", err);
+        })
 
 });
 
-app.listen(app.get("port"), () => console.log(`Example app listening on port ${port}!`))
+app.listen(app.get("port"), () => console.log(`NerdSummit app listening on port ${port}!`))

@@ -13,7 +13,7 @@ The sessions section is built with Javascript via the `/js/sessions.js` file whi
 
 See `/backend/README.md` for how the backend works. 
 
-# WORKLOW AND DEPLOY
+# WORKFLOW AND DEPLOY
 
 Pushing the master branch automatically deploys the code to the Github site: https://nerdsummit.org/
 

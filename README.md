@@ -1,56 +1,34 @@
-# NERD Summit Code of Conduct
-We are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, age, sexual orientation, disability, ethnicity, religion, operating system, programming language, or text editor.
+# NERD Summit Website
+This is the codebase for the NERD Summit website: https://nerdsummit.org/ 
 
-# PURPOSE
+# STRUCTURE
 
-This code of conduct outlines our expectations for participant behavior as well as the consequences for unacceptable behavior.
+The site is essentially a one-page website with most of the content in `index.html` and with `code.html` being the Code of Conduct page. 
 
-We invite all sponsors, volunteers, speakers, attendees, and other participants to help us realize a safe and positive conference experience for everyone.
+No SASS is used, just CSS.
 
-# EXPECTED BEHAVIOR
+The sessions section is built with Javascript via the `/js/sessions.js` file which gets the sessions data from `data/sessions.json`. This is currently in the process of being changed to get data from a Google Sheet via a JSON feed.  See BACKEND section.
 
-Be considerate, respectful, and collaborative.
-Refrain from demeaning, discriminatory or harassing behavior and speech.
-Be mindful of your surroundings and of your fellow participants. Alert conference organizers if you notice a dangerous situation or someone in distress.
-Participate in an authentic and active way. In doing so, you help to create NERDSummit and make it your own.
-Actively encourage other participants in their learning and communication.
-Try to follow the rule, "No one speaks twice before everyone speaks once."
-Actively listen and stand up for others being heard.
+# BACKEND
 
-# UNACCEPTABLE BEHAVIOR
+TBA: How the backend works goes here.
 
-Unacceptable behaviors include: intimidating, harassing, abusive, discriminatory, derogatory or demeaning conduct by any attendees of NERDSummit and related events. All NERDSummit venues may be shared with members of the public; please be respectful to all patrons of these locations.
+# WORKLOW AND DEPLOY
 
-Harassment includes: offensive verbal comments related to gender, sexual orientation, race, religion, disability; inappropriate use of nudity and/or sexual images in public spaces (including presentation slides); deliberate intimidation, stalking or following; harassing photography or recording; sustained disruption of talks or other events; inappropriate physical contact, and unwelcome sexual attention.
+Pushing the master branch automatically deploys the code to the Github site: https://nerdsummit.org/
 
-# CONSEQUENCES OF UNACCEPTABLE BEHAVIOR
+Create and push a branch with your code, then create a pull request. 
 
-Unacceptable behavior will not be tolerated whether by other attendees, organizers, venue staff, sponsors, or other patrons of NERDSummit venues.
+# ABOUT NERD (New England Regional Developers)
 
-Anyone asked to stop unacceptable behavior is expected to comply immediately.
+NERD creates positive and supportive learning opportunities for people who work, or want to work in web and related technology. Too many smart, passionate people have been traditionally excluded from tech careers, and we're changing that.
 
-If a participant engages in unacceptable behavior, the conference organizers may take any action they deem appropriate, up to and including expulsion from the conference without warning or refund.
+NERD runs an annual conference in March each year called NERD Summit, hosted at UMass Amherst. 
 
-# WHAT TO DO IF YOU WITNESS OR ARE SUBJECT TO UNACCEPTABLE BEHAVIOR
+The Organizers of NERD Summit can be contacted at contact@nerdsummit.org.
 
-If you are subject to unacceptable behavior, notice that someone else is being subject to unacceptable behavior, or have any other concerns, please notify a conference organizer as soon as possible.
+See also: https://nerd.ngo/
 
-The NERDSummit Organizer team will be available to help participants contact venue security or local law enforcement, to provide escorts, or to otherwise assist those experiencing unacceptable behavior to feel safe for the duration of the conference. Any volunteer can connect you with a conference organizer. You can also come to the registration desk and ask for the organizers.
+Please consider supporting NERD by sponsporing NERD Summit: https://nerdsummit.org/#sponsor or by donating to NERD: https://www.mightycause.com/organization/Nerd
 
-# SCOPE
-
-We expect all conference participants (sponsors, volunteers, speakers, attendees, and other guests) to abide by this code of conduct at all conference venues and conference-related social events.
-
-# CONTACT INFORMATION
-
-The Organizers of NERDSummit can be contacted at contact@nerdsummit.org, or by filling out the contact form on this site.
-
-Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
-
-* Email address for organizers: contact@nerdsummit.org
-* Phone number for organizers: 413-387-4540   
-* Phone number for hotel/venue: 877-822-2110
-* Local law enforcement: 413-259-3000
-* Local sexual assault hot line: 413-687-4037 see also: On-site Advocacy Services
-* Local emergency and non-emergency medical: 911
-* Local taxi company: 413-253-7330
+Thank you!  

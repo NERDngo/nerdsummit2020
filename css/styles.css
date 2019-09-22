@@ -7,7 +7,7 @@ Pink light      #e0699a
 Purple          #500092
 Purple light    #8302ee
 Orange          #f0852d
-
+Yellow          #fffb83
 */
 
 
@@ -63,6 +63,9 @@ a.pink-text {
 .purple-background  {
     background-color: #6E11D0;
     color: #fff;
+}
+.yellow-text {
+    color: #fffb83
 }
 
 

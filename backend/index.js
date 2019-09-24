@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
 
+// Unsorted session objects
 app.get('/', (req, res) => {
 
     knex.from('session_blobs')
@@ -21,13 +22,50 @@ app.get('/', (req, res) => {
         .orderBy('id', 'desc')
         .first()
         .then(data => {
+
+            const responseData = {
+                data: {
+                    Sessions: data.json_blob
+                }
+            }
             res.setHeader('Content-Type', 'text/plain')
-            res.write('you get:\n')
-            res.end(JSON.stringify(data, null, 2))
+            res.end(JSON.stringify(responseData, null, 2))
         })
 
 })
 
+// Session objects sorted by day
+app.get('/by-day', (req, res) => {
+
+    knex.from('session_blobs')
+        .select('json_blob')
+        .orderBy('id', 'desc')
+        .first()
+        .then(data => {
+            console.log(data)
+            const days = data.json_blob.reduce((acc, curr) => {
+                if (curr.data = "Saturday") {
+                    acc.Saturday.push(curr);
+                    return acc;
+                }
+                acc.Sunday.push(curr);
+                return acc;
+            }, {
+                Saturday: [],
+                Sunday: []
+            })
+            const responseData = {
+                data: {
+                    Sessions: days
+                }
+            }
+            res.setHeader('Content-Type', 'text/plain')
+            res.end(JSON.stringify(responseData, null, 2))
+        })
+
+})
+
+// Initiate a Sheets fetch
 app.get('/initiate-fetch', (req, res) => {
 
     getData()

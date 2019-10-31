@@ -5,9 +5,13 @@ This is the codebase for the NERD Summit website: https://nerdsummit.org/
 
 The site is essentially a one-page website with most of the content in `index.html` and with `code.html` being the Code of Conduct page. 
 
-No SASS is used, just CSS.
+In the old version of the site, no SASS is used, just CSS.
 
 The sessions section is built with Javascript via the `/js/sessions.js` file which gets the sessions data from `data/sessions.json`. This is currently in the process of being changed to get data from a Google Sheet via a JSON feed.  See BACKEND section.
+
+# FRONTEND
+
+Starting with the 2020 version of the site, Gulp has been configured to use Sass and PostCSS. In order to use this, install everything by opening a terminal window, navigating to the `nerdsummit2020` folder on your machine, and running `npm install`. To run the Gulp command, run `gulp watch`.
 
 # BACKEND
 

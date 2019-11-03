@@ -1,0 +1,6 @@
+
+.footer {
+  &__inner {
+    @extend %inner-width;
+  }
+}

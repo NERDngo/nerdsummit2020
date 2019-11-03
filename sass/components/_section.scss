@@ -1,0 +1,5 @@
+.section {
+  &__inner {
+    @extend %inner-width;
+  }
+}

@@ -9,7 +9,7 @@ var sourcemaps = require("gulp-sourcemaps");
 
 function style() {
   return (
-    gulp.src("sass/*.scss")
+    gulp.src("sass/**/*.scss")
       // Initialize sourcemaps before compilation starts
       .pipe(sourcemaps.init())
       .pipe(sass())
@@ -25,7 +25,7 @@ function style() {
 }
 
 function watch() {
-  gulp.watch("sass/*.scss", style);
+  gulp.watch("sass/**/*.scss", style);
 }
 
 exports.watch = watch;

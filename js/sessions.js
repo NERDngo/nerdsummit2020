@@ -56,8 +56,9 @@ function createSessionList(dayId, sessions) {
             '<div class="title">' + '<h4 class="name">' + session.name + '</h4>' + '</div>' +
             '<h5 class="speaker">' + session.speaker + '</h5>' +
             '<p class="tags">Track: ' + session.type + '</p>' +
-            // '<a href="' + session.speakerLink + '">' + session.speaker + '</a>' +
-            // '<a href="' + session.slideLink + '">' + session.name + '</a>'
+            '<a href="' + session.speakerLink + '" class="speaker-link">About this speaker</a>' +
+            '<span> | </span>' +
+            '<a href="' + session.slideLink + '" class="slides-link">Link to slides</a>'
             '</div>' +
             '<div class="info">' +
             '<p>' + session.description + '</p>' +

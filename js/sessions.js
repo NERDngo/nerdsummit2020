@@ -56,16 +56,19 @@ function createSessionList(dayId, sessions) {
             '<div class="title">' + '<h4 class="name">' + session.name + '</h4>' + '</div>' +
             '<h5 class="speaker">' + session.speaker + '</h5>' +
             '<p class="tags">Track: ' + session.type + '</p>' +
-            '<a href="' + session.speakerLink + '" class="speaker-link">About this speaker</a>' +
+            conditionalLink(session.speakerLink, "About this speaker", "speaker-link") +
             '<span> | </span>' +
-            '<a href="' + session.slideLink + '" class="slides-link">Link to slides</a>' +
+            conditionalLink(session.slideLink, "Link to slides", "slides-link") +
             '</div>' +
             '<div class="info">' +
             '<p>' + session.description + '</p>' +
             '</div>';
         dayElement.appendChild(sessionElement);
-    })
+    });
 
+    function conditionalLink(link, linkText, className) {
+        return link ? `<a href="${link}" class="${className}">${linkText}</a>` : '';
+    }
 
 }
 

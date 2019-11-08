@@ -11,6 +11,8 @@ The sessions section is built with Javascript via the `/js/sessions.js` file whi
 
 Starting with the 2020 version of the site, Gulp has been configured to use Sass and PostCSS. In order to use this, install everything by opening a terminal window, navigating to the `nerdsummit2020` folder on your machine, and running `npm install`. To run the Gulp command, run `gulp watch`.
 
+CSS classes should be named by using the BEM (Block, Element, Modifier) methodology. To learn more, [Get BEM](http://getbem.com/) give an overview of the methodology, ways to implement it, and answers frequently asked questions.
+
 # BACKEND
 
 See `/backend/README.md` for how the backend works. 

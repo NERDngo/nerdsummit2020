@@ -5,8 +5,6 @@ This is the codebase for the NERD Summit website: https://nerdsummit.org/
 
 The site is essentially a one-page website with most of the content in `index.html` and with `code.html` being the Code of Conduct page. 
 
-In the old version of the site, no SASS is used, just CSS.
-
 The sessions section is built with Javascript via the `/js/sessions.js` file which gets the sessions data from `data/sessions.json`. This is currently in the process of being changed to get data from a Google Sheet via a JSON feed.  See BACKEND section.
 
 # FRONTEND

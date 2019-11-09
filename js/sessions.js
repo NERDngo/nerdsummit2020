@@ -59,16 +59,21 @@ function createSessionList(dayId, sessions) {
         const seperator = session.slideLink && session.speakerLink ? `<span> | </span>` : null;
         return sanitize`
         <div class="top" id="${session.id}">
-            <div class="time">${session.start} - ${session.end}</div>
-            <div class="room">Room: ${session.room}</div>
-            <div class="title"><h4 class="name">${session.name}</h4></div>
-            <h5 class="speaker">${session.speaker}</h5>
+            <div class="top-content">
+                <div class="title"><h4 class="name">${session.name}</h4></div>
+                <div class="time">${session.start} - ${session.end}</div>
+                <div class="room">Room: ${session.room}</div>
+            </div>
+            <div class="top-control">
+                <span class="plus">+</span><span class="minus">-</span>
+            </div>
+        </div>
+        <div class="info">
+            <p class="speaker">${session.speaker}</p>
             <p class="tags">Track: ${session.type}</p>
             ${speakerLink}
             ${seperator}
             ${slideLink}
-        </div>
-        <div class="info">
             <p>${session.description}</p>
         </div>
         `;
@@ -81,4 +86,3 @@ function createSessionList(dayId, sessions) {
         return dirty;
     }
 }
-

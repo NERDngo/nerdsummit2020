@@ -3,14 +3,22 @@
   .timeslots {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     margin-top: 50px;
     .timeslot {
-      width: 50%;
+      width: 100%;
+      @media (min-width: $tablet) {
+        width: 49%;
+      }
       text-align: center;
       .inner {
         text-align: left;
-        padding: 10px;
+      }
+    }
+    .timeslots-spacer {
+      width: 0%;
+      @media (min-width: $tablet) {
+        width: 2%;
       }
     }
   }
@@ -18,5 +26,33 @@
   .session {
     padding: 20px;
     border: 2px solid #CCCCCC;
+    .top {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+    .top-content {
+      width: 93%;
+    }
+    .top-control {
+      width: 7%;
+      .plus {
+       font-size: 36px;
+      }
+      .minus {
+        font-size: 36px;
+        display: none;
+      }
+    }
+    .time {
+      display: inline-block;
+    }
+    .room {
+      margin-left: 20px;
+      display: inline-block;
+    }
+    .info {
+      display: none;
+    }
   }
 }

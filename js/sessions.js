@@ -45,27 +45,44 @@ function massageData(array) {
 
 function createSessionList(dayId, sessions) {
     const dayElement = document.querySelector(`#${dayId}`);
-    console.log(dayElement)
     sessions.forEach(session => {
         let sessionElement = document.createElement('div');
         sessionElement.className = 'session';
-        sessionElement.innerHTML =
-            '<div class="top" id="' + session.id + '">' +
-            '<div class="time">' + session.start + ' - ' + session.end + '</div>' +
-            '<div class="room">Room: ' + session.room + '</div>' +
-            '<div class="title">' + '<h4 class="name">' + session.name + '</h4>' + '</div>' +
-            '<h5 class="speaker">' + session.speaker + '</h5>' +
-            '<p class="tags">Track: ' + session.type + '</p>' +
-            '<a href="' + session.speakerLink + '" class="speaker-link">About this speaker</a>' +
-            '<span> | </span>' +
-            '<a href="' + session.slideLink + '" class="slides-link">Link to slides</a>' +
-            '</div>' +
-            '<div class="info">' +
-            '<p>' + session.description + '</p>' +
-            '</div>';
+        sessionElement.innerHTML = sessionTemplate(session);
+
         dayElement.appendChild(sessionElement);
     })
 
+    function sessionTemplate(session) {
+        const speakerLink = session.speakerLink ? `<a href="${session.speakerLink}" class="speaker-link">About this speaker</a>` : null;
+        const slideLink = session.slideLink ? `<a href="${session.slideLink}" class="slides-link">Link to slides</a>` : null;
+        const seperator = session.slideLink && session.speakerLink ? `<span> | </span>` : null;
+        return sanitize`
+        <div class="top" id="${session.id}">
+            <div class="top-content">
+                <div class="title"><h4 class="name">${session.name}</h4></div>
+                <div class="time">${session.start} - ${session.end}</div>
+                <div class="room">Room: ${session.room}</div>
+            </div>
+            <div class="top-control">
+                <span class="plus">+</span><span class="minus">-</span>
+            </div>
+        </div>
+        <div class="info">
+            <p class="speaker">${session.speaker}</p>
+            <p class="tags">Track: ${session.type}</p>
+            ${speakerLink}
+            ${seperator}
+            ${slideLink}
+            <p>${session.description}</p>
+        </div>
+        `;
+    }
 
+    function sanitize(strings, ...values) {
+        const dirty = strings.reduce((prev, next, i) => {
+            return `${prev}${next}${DOMPurify.sanitize(values[i])}`
+        }, '');
+        return dirty;
+    }
 }
-

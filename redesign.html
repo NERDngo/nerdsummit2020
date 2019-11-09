@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css-new/styles.css?v=5">
     <link rel="stylesheet" href="css/mobile-styles.css?v=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.3/purify.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -56,20 +57,20 @@
           
           <!--BEGIN SESSIONS-->
           <div class="timeslots">
-          <!--BEGIN SATURDAY-->
-          <div class="timeslot saturday">
-            <h4 class="day">SATURDAY</h4><img class="lil-nerdy-sessions" src="images/lil-nerdy.png">
+          <!--BEGIN DAY 1-->
+          <div class="timeslot day-1">
+            <h3 class="day">FRIDAY MARCH 20</h3>
             <div class="inner">
-              <p class="more-info">Click on a session for more info.</p>
+              <!-- <p class="more-info">Click on a session for more info.</p> -->
               <div id="Saturday"></div>
             </div>
           </div>
-
-          <!--BEGIN SUNDAY-->
-          <div class="timeslot sunday">
-            <h4 class="day">SUNDAY</h4><img class="lil-nerdy-sessions" src="images/lil-nerdy.png">
+          <div class="timeslots-spacer"></div>
+          <!--BEGIN DAY 2-->
+          <div class="timeslot day-2">
+            <h3 class="day">SATURDAY MARCH 21</h3>
             <div class="inner">
-              <p class="more-info">Click on a session for more info.</p>
+              <!-- <p class="more-info">Click on a session for more info.</p> -->
               <div id="Sunday"></div>
             </div>
           </div>
@@ -263,7 +264,7 @@
 <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/what-input.js"></script>
 <script src="js/app.js"></script>
-<script src="js/sessions.js?ver=6"></script>
+<script src="js/sessions.js?ver=1"></script>
 
     <!--<script>-->
     <!--$(function(){-->
@@ -275,9 +276,13 @@
       $(document).ready(function(){
         $('#Saturday').on('click', '.top', function (){
           $(this).next().toggle();
+          $(this).find('.top-control .plus').toggle();
+          $(this).find('.top-control .minus').toggle();
         });
         $('#Sunday').on('click', '.top', function (){
           $(this).next().toggle();
+          $(this).find('.top-control .plus').toggle();
+          $(this).find('.top-control .minus').toggle();
         });
       });
     </script>

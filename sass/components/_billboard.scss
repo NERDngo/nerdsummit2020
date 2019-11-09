@@ -1,0 +1,14 @@
+.billboard {
+  &__inner {
+    @extend %inner-width;
+  }
+
+  &--summit {
+    background: #ffe5e3;
+  }
+
+  &__header {
+    color: #2027bd;
+    font-size: 48px;
+  }
+}

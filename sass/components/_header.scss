@@ -1,54 +1,23 @@
 
 .header {
   &--fixed {
-
-    // position:relative;
     text-align:center;
-    // display:block;
-    // background:#abcdef;
-    // height:80px;
-    // width:100%;
-
-    // border-bottom: 2px solid lightgrey;
-    // box-shadow: 0px 0px 3px 0px #888888;
-    // margin: 0 0 0 0;
-//     position: fixed;
-//     margin: 0;
-// margin-right:0;
-// border: 5 solid;
-// border-bottom: 5 solid green;
-
-//     top: 0;
-    // left: 0px;
-    // right: 0px;
-//     height: 80px;
-//     width: 100%;
-    // background: pink;
-
   }
 
   &__inner {
     @extend %inner-width;
     display: flex;
-    // justify-content: center;
-    // align-items: center;
     height: 80px;
     width: 100%;
-    // padding-left: 15%;
-    // padding-right: 50%;
-    // @include center;
-    // padding-left: 20%;
-    // align-items: center;
-    // background: greenyellow;
-
-    // margin-right: 0;
-        box-shadow: 0px 0px 3px 0px #888888;
+    box-shadow: 0px 0px 3px 0px #888888;
 
         a{
           text-decoration: none;
           color: black;
           padding: 25px;
         }
+
+       
 
   }
 }

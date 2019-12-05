@@ -6,6 +6,7 @@
   width: 100%;
 text-align: center;
 justify-content: center;
+
  
   // background:chocolate;
   li:last-child {
@@ -18,6 +19,10 @@ justify-content: center;
 
   &__item {
     display: inline-block;
+    @media (max-width: 954px) {
+     display: none;
+     
+    }
     
 
     a{

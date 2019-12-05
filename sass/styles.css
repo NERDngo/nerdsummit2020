@@ -142,6 +142,12 @@ body {
   display: inline-block;
 }
 
+@media (max-width: 954px) {
+  .nav__item {
+    display: none;
+  }
+}
+
 .nav__item a {
   font-weight: lighter;
 }

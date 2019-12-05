@@ -90,13 +90,17 @@ body {
     background-color: rgba(255, 255, 255, .75);
 }
 
+.header-fixed {
+    background-color: pink;
+}
+
 .header-logo {
     display: inline-block;
     margin-left: 75px;
 }
 .main-menu {
     display: inline-block;
-    float: right;
+    /* float: right; */
     margin-right: 50px;
 }
 .menu-links {

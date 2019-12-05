@@ -1,0 +1,241 @@
+/*
+  Super fancy Sass file!
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: gilroyextrabold, sans-serif;
+}
+
+.header__inner, .section__inner, .footer__inner {
+  margin: auto;
+  max-width: 100%;
+}
+
+.header--fixed {
+  text-align: center;
+}
+
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 3px 0px #888888;
+          box-shadow: 0px 0px 3px 0px #888888;
+}
+
+.header__inner a {
+  text-decoration: none;
+  color: black;
+  padding: 25px;
+}
+
+.testing {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav li:last-child {
+  background: lightgrey;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  padding: 5px;
+  margin-left: 100px;
+}
+
+.nav__item {
+  display: inline-block;
+}
+
+.nav__item a {
+  font-weight: lighter;
+}
+
+.main {
+  padding-top: 50px;
+}
+
+.section--sessions {
+  padding-top: 50px;
+}
+
+.section--sessions .timeslots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.section--sessions .timeslots .timeslot {
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .section--sessions .timeslots .timeslot {
+    width: 49%;
+  }
+}
+
+.section--sessions .timeslots .timeslot .inner {
+  text-align: left;
+}
+
+.section--sessions .timeslots .timeslots-spacer {
+  width: 0%;
+}
+
+@media (min-width: 768px) {
+  .section--sessions .timeslots .timeslots-spacer {
+    width: 2%;
+  }
+}
+
+.section--sessions .session {
+  padding: 20px;
+  border: 2px solid #CCCCCC;
+}
+
+.section--sessions .session .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.section--sessions .session .top-content {
+  width: 93%;
+}
+
+.section--sessions .session .top-control {
+  width: 7%;
+}
+
+.section--sessions .session .top-control .plus {
+  font-size: 36px;
+}
+
+.section--sessions .session .top-control .minus {
+  font-size: 36px;
+  display: none;
+}
+
+.section--sessions .session .time {
+  display: inline-block;
+}
+
+.section--sessions .session .room {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+.section--sessions .session .info {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */

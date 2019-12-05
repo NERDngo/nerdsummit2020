@@ -1,8 +1,29 @@
+.testing{
+  align-items: center;
+}
 .nav {
   display: flex;
-  align-items: center;
+  width: 100%;
+text-align: center;
+justify-content: center;
+ 
+  // background:chocolate;
+  li:last-child {
+    background: lightgrey;
+    align-content: flex-end;
+    // float: right;
+    padding: 5px;
+    margin-left: 100px;
+  }
 
   &__item {
     display: inline-block;
+    
+
+    a{
+      font-weight: lighter;
+    }
+
+    
   }
 }

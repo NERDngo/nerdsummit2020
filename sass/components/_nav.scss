@@ -8,10 +8,10 @@ justify-content: center;
     background: lightgrey;
     align-content: flex-end;
     padding: 5px;
-    float: right;
-    // @media (max-width: $tablet) {
-    //   display: none;
-    //  }
+    margin-left: 100px;
+    @media (max-width: 958px) {
+    margin-left: 0;
+       }
   }
 
   &__item {

@@ -113,6 +113,13 @@ body {
   padding: 25px;
 }
 
+@media (max-width: 854px) and (min-width: 767px) {
+  .header__inner a {
+    padding: 15px;
+    text-align: left;
+  }
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,7 +136,13 @@ body {
   -ms-flex-line-pack: end;
       align-content: flex-end;
   padding: 5px;
-  float: right;
+  margin-left: 100px;
+}
+
+@media (max-width: 958px) {
+  .nav li:last-child {
+    margin-left: 0;
+  }
 }
 
 .nav__item {

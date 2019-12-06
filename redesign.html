@@ -18,10 +18,10 @@
 <body>
   <header class="header">
 
-    <div class="header__inner header--fixed">
+    <div class="header__inner header--fixed" id="header1">
 
       <nav class="nav">
-        <h1><a href="/">#NERDS20</a></h1>
+        <h1 class="logo"><a href="/">#NERDS20</a></h1>
 
         <ul class="nav__list">
           <li class="nav__item"><a href="#sessions">Sessions</a></li>
@@ -36,7 +36,6 @@
   </header>
 
   <main class="main">
-
     <section class="section section--summit">
       <div class="section__inner">
         <a class="anchor-link" name="summit"></a>
@@ -311,6 +310,15 @@
         $(this).find('.top-control .minus').toggle();
       });
     });
+  </script>
+
+  <script>
+    window.onscroll = () => {
+      const header = document.querySelector('#header1');
+      if (this.scrollY <= 10) header.className = 'header__inner header--fixed';
+      else header.className = 'scroll';
+    };
+
   </script>
 </body>
 

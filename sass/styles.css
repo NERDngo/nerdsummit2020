@@ -95,6 +95,7 @@ body {
 
 .header--fixed {
   text-align: center;
+  background: #ffe5e3;
 }
 
 .header__inner {
@@ -103,8 +104,6 @@ body {
   display: flex;
   height: 80px;
   width: 100%;
-  -webkit-box-shadow: 0px 0px 3px 0px #888888;
-          box-shadow: 0px 0px 3px 0px #888888;
 }
 
 .header__inner a {
@@ -120,6 +119,32 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .header__inner {
+    width: 80%;
+  }
+}
+
+div.scroll {
+  position: fixed;
+  background: white;
+  -webkit-box-shadow: 0px 10px 39px 0px rgba(165, 171, 189, 0.37);
+          box-shadow: 0px 10px 39px 0px rgba(165, 171, 189, 0.37);
+  text-align: center;
+  width: 100%;
+  height: 80px;
+}
+
+div.scroll a {
+  text-decoration: none;
+  color: black;
+  padding: 25px;
+}
+
+div.scroll nav {
+  padding: 22px;
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,11 +157,17 @@ body {
 }
 
 .nav li:last-child {
-  background: lightgrey;
+  background: #2027bd;
+  color: #ffe5e3;
   -ms-flex-line-pack: end;
       align-content: flex-end;
   padding: 5px;
   margin-left: 100px;
+  text-transform: uppercase;
+}
+
+.nav li:last-child a {
+  color: #ffe5e3;
 }
 
 @media (max-width: 958px) {
@@ -157,6 +188,10 @@ body {
 
 .nav__item a {
   font-weight: lighter;
+}
+
+.nav h1 a {
+  color: #2027bd;
 }
 
 .menu {

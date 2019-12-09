@@ -488,4 +488,29 @@ div.scroll nav {
 .section--sessions .session .info {
   display: none;
 }
+
+.section {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+section.section.section--summit {
+  height: 400px;
+  background: #ffe5e3;
+  padding: 50px;
+}
+
+@media (min-width: 1200px) {
+  section.section.section--summit {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+h2.section__header {
+  font-size: 52px;
+  color: #2027bd;
+}
 /*# sourceMappingURL=styles.css.map */

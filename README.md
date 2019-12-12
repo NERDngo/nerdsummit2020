@@ -15,7 +15,7 @@ CSS classes should be named by using the BEM (Block, Element, Modifier) methodol
 
 # BACKEND
 
-See `/backend/README.md` for how the backend works. 
+Google Sheets published sheet.
 
 # WORKFLOW AND DEPLOY
 

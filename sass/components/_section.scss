@@ -24,6 +24,16 @@ padding-right: 5%;
 }
 
 h2.section__header{
-  font-size: 52px;
-  color: #2027bd;
+  font-size: 3rem;
+  color: $nerd-blue;
+  font-weight: 900;
+  line-height: 3.1875rem;
+  text-align: center;
+}
+.section__subtitle {
+  font-size: 1.5rem;
+  color:$nerd-grey;
+  font-weight: 500;
+  line-height: 1.875rem;
+  text-align: center;
 }

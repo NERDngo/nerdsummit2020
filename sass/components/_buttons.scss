@@ -1,0 +1,18 @@
+.button {
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  border: 3px solid $nerd-blue;
+}
+
+.button--primary {
+    color: $nerd-white;
+    background: $nerd-blue;
+}
+
+.button--secondary {
+    /*placeholder for now it uses the default page styling.*/
+}

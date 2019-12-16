@@ -1,25 +1,24 @@
 .nav {
+  padding: 22px;
   display: flex;
   width: 100%;
-text-align: center;
-justify-content: center;
-
-
+  text-align: center;
+  justify-content: center;
   li:last-child {
-    background: rgb(32, 39, 189);
-    color:  rgb(255, 229, 227);
+    background-color: #2128BD;
+    color: #FAF8F2;
     align-content: flex-end;
     padding: 5px;
     margin-left: 100px;
     text-transform: uppercase;
     a{
-      color: rgb(255, 229, 227)
+      color: rgb(255, 229, 227);
+      font-size: 16px;
+      font-weight: bold;
     }
-
-
     @media (max-width: 958px) {
     margin-left: 0;
-       }
+    }
   }
 
   &__item {
@@ -28,15 +27,20 @@ justify-content: center;
      display: none;
     }
     
-
     a{
       font-weight: lighter;
     }
   }
 
   h1{
+    margin-top: -7px;
     a{
       color: rgb(32, 39, 189);;
+      display: inline-block;
+      border: solid 1px white;
+      padding: 10px;
+      font-size: 24px;
+      text-align: center;
     }
   }
 }

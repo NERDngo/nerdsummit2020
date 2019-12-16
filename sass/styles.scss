@@ -2,14 +2,14 @@
   Super fancy Sass file!
 */
 
-@import 'base/reset';
 @import 'base/variables';
+@import 'base/reset';
 @import 'base/mixins';
 
 @import 'components/header';
 @import 'components/nav';
 @import 'components/main';
 @import 'components/sessions';
-@import 'components/section';
+@import 'components/billboard';
 @import 'components/footer';
 

@@ -79,8 +79,7 @@ select {
   }
 }
 
-
 // Font declarations
 body {
-  font-family: gilroyextrabold, sans-serif;
+  font-family: $base-font-family;
 }

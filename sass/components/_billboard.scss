@@ -1,0 +1,103 @@
+.billboard {
+  $_parent: &;
+
+  &__inner {
+    @extend %inner-width;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    // Sessions billboard is not centered
+    #{$_parent}--sessions & {
+      align-items: flex-start;
+    }
+  }
+
+  &--summit {
+    background: #ffe5e3;
+    height: 500px;
+  }
+
+  &--sessions {
+    text-align: left;
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
+  &--location {
+    background-color: #F9F7F0;
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  &--sponsors {
+  }
+
+  &--about {
+    background-color: #ECF1FD;
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+
+  &--contact {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  &__header {
+    color: #2027bd;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    padding-bottom: 35px;
+  }
+
+  &__subheader {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  // TODO think of a class name instead of using h4 here
+  h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  &__button-item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  &__button {
+    font-size: 16px;
+    border: solid 3px #2027bd;
+    padding: 4px 16px;
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &--primary {
+      background-color: #2027bd;
+      color: white;
+    }
+
+    &--secondary {
+      background-color: transparent;
+      color: #2027bd;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    margin-bottom: 35px;
+  }
+}

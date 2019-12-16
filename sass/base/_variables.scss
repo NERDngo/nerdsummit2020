@@ -3,13 +3,18 @@ $nerd-green: #5ccf18;
 $nerd-green--light: #a1db7e;
 $nerd-pink: #ff3369;
 $nerd-pink--light: #e0699a;
+$nerd-blue: #7bf5ff;
 $nerd-purple: #500092;
 $nerd-purple--light: #8302ee;
 $nerd-orange: #f0852d;
 $nerd-yellow: #fffb83;
 
-// breakpoints 
+// Breakpoints 
 $mobile: 600px;
 $tablet: 768px;
-$full-width: 1280px;
+$full-width: 1200px;
 $full-header-width: 100%;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900&display=swap');
+$base-font-family: 'Montserrat', sans-serif;

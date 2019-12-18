@@ -33,7 +33,7 @@
   }
 
   &--location {
-    background-color: $nerd-yellow;
+    background-color: $nerd-purple;
 
     p:last-of-type {
       margin-bottom: 0;
@@ -117,6 +117,39 @@
     }
   }
 
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    a {
+      margin: 0 20px;
+    }
+  }
+
+  &__columns {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 35px;
+
+    > div {
+      flex-basis: 50%;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
   p {
     font-weight: 400;
     margin-bottom: 30px;
@@ -135,5 +168,9 @@
       border-bottom: solid 3px $nerd-blue--dark;
       color: black;
     }
+  }
+
+  img {
+    margin-bottom: 60px;
   }
 }

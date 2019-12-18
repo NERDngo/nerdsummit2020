@@ -1,5 +1,4 @@
 .billboard {
-  max-width: 1200px;
   margin: auto;
   $_parent: &;
   padding: 130px 0;
@@ -95,15 +94,26 @@
     text-decoration: none;
     font-weight: 700;
     text-transform: uppercase;
+    transition: all .3s;
 
     &--primary {
       background-color: $nerd-blue--dark;
       color: white;
+
+      &:hover {
+        background-color: black;
+        border-color: black;
+      }
     }
 
     &--secondary {
       background-color: transparent;
       color: $nerd-blue--dark;
+
+      &:hover {
+        color: black;
+        border-color: black;
+      }
     }
   }
 
@@ -111,5 +121,19 @@
     font-weight: 400;
     margin-bottom: 30px;
     font-size: 18px;
+  }
+
+  a:not(.billboard__button) {
+    font-size: 16px;
+    font-weight: 900;
+    color: $nerd-blue--dark;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: border-bottom .2s;
+
+    &:hover {
+      border-bottom: solid 3px $nerd-blue--dark;
+      color: black;
+    }
   }
 }

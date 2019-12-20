@@ -14,7 +14,7 @@
 
     // Sessions billboard is not centered
     #{$_parent}--sessions & {
-      align-items: flex-start;
+      text-align: left;
     }
   }
 
@@ -29,7 +29,8 @@
   }
 
   &--sessions {
-    text-align: left;
+    background: url(../images/background-yellow.jpg);
+    background-size: 50%;
   }
 
   &--location {
@@ -48,6 +49,8 @@
   }
 
   &--contact {
+    background: url(../images/background-purple.jpg);
+    background-size: 50%;
   }
 
   &__callout {

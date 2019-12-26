@@ -1,7 +1,11 @@
 .billboard {
   margin: auto;
   $_parent: &;
-  padding: 130px 0;
+  padding: 90px 0;
+
+  @media (min-width: $tablet) {
+    padding: 130px 0;
+  }
 
   &__inner {
     @extend %inner-width;
@@ -11,10 +15,15 @@
     justify-content: center;
     height: 100%;
     text-align: center;
+    padding: 0 20px;
+
+    @media (min-width: $tablet) {
+      padding: 0;
+    }
 
     // Sessions billboard is not centered
     #{$_parent}--sessions & {
-      align-items: flex-start;
+      text-align: left;
     }
   }
 
@@ -29,7 +38,8 @@
   }
 
   &--sessions {
-    text-align: left;
+    background: url(../images/background-yellow.jpg);
+    background-size: 50%;
   }
 
   &--location {
@@ -48,26 +58,43 @@
   }
 
   &--contact {
+    background: url(../images/background-purple.jpg);
+    background-size: 50%;
   }
 
   &__callout {
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 500;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
+
+    @media (min-width: $tablet) {
+      font-size: 24px;
+      margin-bottom: 35px;
+    }
   }
 
   &__header {
     color: $nerd-blue--dark;
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 900;
     line-height: 1.1;
-    padding-bottom: 35px;
+    padding-bottom: 25px;
+
+    @media (min-width: $tablet) {
+      font-size: 48px;
+      padding-bottom: 35px;
+    }
   }
 
   &__subheader {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet) {
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
   }
 
   // TODO think of a class name instead of using h4 here
@@ -78,11 +105,26 @@
     text-transform: uppercase;
   }
 
+  &__button-container {
+    width: 100%;
+    text-align: center;
+  }
+
   &__button-item {
-    display: inline-block;
+    text-align: center;
 
     &:not(:last-child) {
-      margin-right: 40px;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $tablet) {
+      display: inline-block;
+      max-width: initial;
+
+      &:not(:last-child) {
+        margin-right: 40px;
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -130,13 +172,17 @@
   }
 
   &__columns {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    margin-top: 35px;
+    margin-top: 20px;
 
-    > div {
-      flex-basis: 50%;
+    @media (min-width: $tablet) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin-top: 35px;
+
+      > div {
+        flex-basis: 50%;
+      }
     }
   }
 
@@ -146,7 +192,11 @@
     list-style: none;
 
     li:not(:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+
+      @media (min-width: $tablet) {
+        margin-bottom: 20px;
+      }
     }
   }
 

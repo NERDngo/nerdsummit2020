@@ -16,6 +16,7 @@
     height: 100%;
     text-align: center;
     padding: 0 20px;
+    position: relative;
 
     @media (min-width: $tablet) {
       padding: 0;
@@ -33,8 +34,10 @@
 
   &--summit {
     background: $nerd-peach;
-    height: 500px;
-    padding: 0;
+    padding-top: 100px;
+    padding-bottom: 150px;
+    //height: 500px;
+    //padding: 0;
   }
 
   &--sessions {
@@ -51,6 +54,9 @@
   }
 
   &--sponsors {
+    img {
+      margin-bottom: 60px;
+    }
   }
 
   &--about {
@@ -219,8 +225,15 @@
       color: black;
     }
   }
+}
 
-  img {
-    margin-bottom: 60px;
+
+// TODO create a new partial for nerdy stuff
+.nerdy {
+  &__hero {
+    width: 240px;
+    position: absolute;
+    bottom:-225px;
+    right: 50px;
   }
 }

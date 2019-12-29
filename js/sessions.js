@@ -45,6 +45,7 @@ function massageData(array) {
 
 function createSessionList(dayId, sessions) {
     const dayElement = document.querySelector(`#${dayId}`);
+    if (!dayElement) { return; }
     sessions.forEach(session => {
         let sessionElement = document.createElement('div');
         sessionElement.className = 'session';

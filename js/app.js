@@ -1,3 +1,9 @@
+//@todo once the old page is removed we can remove this codeblock
+if (typeof Foundation !== 'undefined') {
+  $(document).foundation();
+}
+
+
 $(function () {
   $('a[href*="#"]:not([href="#"])').click(function () {
     // Uncheck the overlay checkbox.

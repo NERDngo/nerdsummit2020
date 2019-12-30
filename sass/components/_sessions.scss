@@ -6,6 +6,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 50px;
+    width: 100%;
     .timeslot {
       width: 100%;
       @media (min-width: $tablet) {
@@ -26,6 +27,7 @@
   // individual session component 
   .session {
     padding: 20px;
+    background-color: white;
     border: 2px solid #CCCCCC;
     .top {
       display: flex;
@@ -37,12 +39,24 @@
     }
     .top-control {
       width: 7%;
-      .plus {
-       font-size: 36px;
+      position: relative;
+      .plus, .minus {
+        position: absolute;
+        color: #2128BD;
+        font-weight: bold;
+        font-size: 3rem;
+        transition: 0.1s ease;
+        cursor: pointer;
       }
       .minus {
-        font-size: 36px;
-        display: none;
+        top: -4px;
+        left: 6px;
+      }
+      .show {
+        opacity: 100%;
+      }
+      .hide {
+        opacity: 0;
       }
     }
     .time {
@@ -54,6 +68,15 @@
     }
     .info {
       display: none;
+      // transition: all 0.5s;
     }
+    h4 {
+      text-transform: initial;
+      font-weight: bold;
+      color: #C61A40;
+    }
+    .plus {
+      
+  }
   }
 }

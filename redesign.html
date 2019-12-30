@@ -357,10 +357,15 @@
     </script>
 
     <script>
+      const header = document.querySelector('#header1');
+
+      if (window.scrollY > 10) {
+        header.className = 'header__inner header--fixed header--scroll';
+      }
       window.onscroll = () => {
-        const header = document.querySelector('#header1');
+        
         if (this.scrollY <= 10) header.className = 'header__inner header--fixed';
-        else header.className = 'scroll';
+        else header.className = 'header__inner header--fixed header--scroll';
       };
 
     </script>

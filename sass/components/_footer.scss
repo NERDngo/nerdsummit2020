@@ -1,3 +1,7 @@
+// from design, footer box:
+// height: 855px;	
+// width: 1200px;
+// 855/1200 = .7125
 
 .footer {
   text-align: center;
@@ -11,8 +15,22 @@
       justify-content: space-evenly;
       max-width: 20rem;
       margin: auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
   }
+
   &__inner {
     @extend %inner-width;
+    background-color: #F9F7F0;
+    padding-top: 10%;
+    padding-bottom: 30%;
+    min-height: 500px; 
+    background-image: url(../images/nerdy-whisking.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 443px;
+     @media (min-width: $tablet) {
+
+    }
   }
 }

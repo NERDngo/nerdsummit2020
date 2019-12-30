@@ -30,23 +30,48 @@
 
   &__narrow {
     max-width: 740px;
+
+    #{$_parent}--sessions & {
+      max-width: 840px;
+    }
   }
 
   &--summit {
     background: $nerd-peach;
     padding-top: 100px;
     padding-bottom: 150px;
-    //height: 500px;
-    //padding: 0;
   }
 
   &--sessions {
     background: url(../images/background-yellow.jpg);
     background-size: 50%;
+
+    .billboard__button-container {
+      text-align: left;
+    }
   }
 
   &--location {
     background-color: $nerd-purple;
+
+    @media (min-width: $tablet) {
+      padding-top: 0;
+    }
+
+    #{$_parent}__inner {
+      @media (min-width: $tablet) {
+        background-image: url(../images/nerdy-recipes.png);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 220px;
+      }
+    }
+
+    #{$_parent}__narrow {
+      @media (min-width: $tablet) {
+        padding-top: 130px;
+      }
+    }
 
     p:last-of-type {
       margin-bottom: 0;
@@ -54,6 +79,10 @@
   }
 
   &--sponsors {
+    @media (min-width: $tablet) {
+      padding-bottom: 160px;
+    }
+
     img {
       margin-bottom: 60px;
     }
@@ -61,6 +90,25 @@
 
   &--about {
     background-color: $nerd-purple;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 0;
+    }
+
+    #{$_parent}__inner {
+      @media (min-width: $tablet) {
+        background-image: url(../images/nerdy-dough.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 443px;
+      }
+    }
+
+    #{$_parent}__columns {
+      @media (min-width: $tablet) {
+        padding-bottom: 90px;
+      }
+    }
   }
 
   &--contact {
@@ -103,12 +151,15 @@
     }
   }
 
-  // TODO think of a class name instead of using h4 here
   h4 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 20px;
     text-transform: uppercase;
+  }
+
+  h5 {
+    margin: 15px 0;
   }
 
   &__button-container {
@@ -190,6 +241,24 @@
         flex-basis: 50%;
       }
     }
+
+    &--55-45 {
+
+      @media (min-width: $tablet) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 35px;
+
+        > div:first-child {
+          flex-basis: 55%;
+        }
+
+        > div:last-child {
+          flex-basis: 45%;
+        }
+      }
+    }
   }
 
   &__list {
@@ -199,10 +268,6 @@
 
     li:not(:last-child) {
       margin-bottom: 10px;
-
-      @media (min-width: $tablet) {
-        margin-bottom: 20px;
-      }
     }
   }
 
@@ -231,9 +296,36 @@
 // TODO create a new partial for nerdy stuff
 .nerdy {
   &__hero {
-    width: 240px;
-    position: absolute;
-    bottom:-225px;
-    right: 50px;
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: inline;
+      width: 240px;
+      position: absolute;
+      bottom:-225px;
+      right: 50px;
+    }
+  }
+
+  &__sessions {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: inline;
+      width: 430px; 
+    }
+
+  }
+
+  &__sponsors {
+    display: none;
+
+    @media (min-width: $tablet) {
+      display: inline;
+      width: 480px;
+      position: absolute;
+      bottom:-325px;
+      left: 0;
+    }
   }
 }

@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /test.html
 Disallow: /redesign.html
+Disallow: /dev.html

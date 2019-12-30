@@ -100,8 +100,8 @@
             <div class="inner">
               <div id="Sunday"></div>
             </div>
-          </div> -->
-        </div>
+          </div>
+        </div> -->
       </div>  <!-- end billboard__inner -->
       <a class="billboard__anchor-link" name="location"></a>
     </section>
@@ -344,14 +344,14 @@
     <script language="javascript" type="text/javascript">
       $(document).ready(function () {
         $('#Saturday').on('click', '.top', function () {
-          $(this).next().toggle();
-          $(this).find('.top-control .plus').toggle();
-          $(this).find('.top-control .minus').toggle();
+          $(this).next().slideToggle();
+          $(this).find('.top-control .plus').toggleClass('hide');
+          $(this).find('.top-control .minus').toggleClass('hide');
         });
         $('#Sunday').on('click', '.top', function () {
-          $(this).next().toggle();
-          $(this).find('.top-control .plus').toggle();
-          $(this).find('.top-control .minus').toggle();
+          $(this).next().slideToggle();
+          $(this).find('.top-control .plus').toggleClass('hide');
+          $(this).find('.top-control .minus').toggleClass('hide');
         });
       });
     </script>

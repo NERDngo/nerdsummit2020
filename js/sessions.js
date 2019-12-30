@@ -66,7 +66,7 @@ function createSessionList(dayId, sessions) {
                 <div class="room">Room: ${session.room}</div>
             </div>
             <div class="top-control">
-                <span class="plus">+</span><span class="minus">-</span>
+                <span class="plus">+</span><span class="minus hide">-</span>
             </div>
         </div>
         <div class="info">

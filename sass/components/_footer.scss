@@ -7,7 +7,18 @@
   text-align: center;
   padding-bottom: 4rem;
   img.social-icon {
-    fill: black;
+    fill: #000000;
+  }
+
+  .nerd-ngo-link {
+    font-family: $base-font-family;
+    font-weight: 800;
+    display: block;
+    padding:20px 0 20px 0;
+  }
+  .nerd-code-link {
+    display: block;
+    padding:20px 0 20px 0;
   }
 
   ul.social-media-links {
@@ -22,15 +33,15 @@
   &__inner {
     @extend %inner-width;
     background-color: #F9F7F0;
-    padding-top: 10%;
+    padding-top: 5%;
     padding-bottom: 30%;
     min-height: 500px; 
     background-image: url(../images/nerdy-whisking.png);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: 443px;
-     @media (min-width: $tablet) {
-
+    background-size: 300px;
+    @media (min-width: $full-width) {
+        background-size: 443px;
     }
   }
 }

@@ -4,8 +4,8 @@
 // 855/1200 = .7125
 
 .footer {
+  background-color: #F9F7F0;
   text-align: center;
-  padding-bottom: 4rem;
   img.social-icon {
     fill: #000000;
   }
@@ -32,7 +32,6 @@
 
   &__inner {
     @extend %inner-width;
-    background-color: #F9F7F0;
     padding-top: 5%;
     padding-bottom: 30%;
     min-height: 500px; 

@@ -32,15 +32,19 @@
     }
   }
 
-  h1{
+  .logo{
     margin-top: -7px;
     a{
-      color: rgb(32, 39, 189);;
+      color: rgb(32, 39, 189);
       display: inline-block;
-      border: solid 1px white;
       padding: 10px;
       font-size: 24px;
       text-align: center;
+    }
+    img {
+      width: 166px;
+      position: relative;
+      top: -12px;
     }
   }
 }

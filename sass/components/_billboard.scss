@@ -53,21 +53,22 @@
 
   &--location {
     background-color: $nerd-purple;
-
-    @media (min-width: $tablet) {
-      padding-top: 0;
-    }
+    padding-top: 0;
 
     #{$_parent}__inner {
+      background-image: url(../images/nerdy-recipes.png);
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 150px;
+
       @media (min-width: $tablet) {
-        background-image: url(../images/nerdy-recipes.png);
-        background-repeat: no-repeat;
-        background-position: top right;
         background-size: 220px;
       }
     }
 
     #{$_parent}__narrow {
+      padding-top: 90px;
+
       @media (min-width: $tablet) {
         padding-top: 130px;
       }
@@ -296,36 +297,43 @@
 // TODO create a new partial for nerdy stuff
 .nerdy {
   &__hero {
-    display: none;
+    width: 200px;
+    position: absolute;
+    bottom:-225px;
+    margin: auto;
 
     @media (min-width: $tablet) {
-      display: inline;
       width: 240px;
-      position: absolute;
-      bottom:-225px;
+      margin: initial;
       right: 50px;
     }
   }
 
   &__sessions {
-    display: none;
+    width: 350px; 
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
 
     @media (min-width: $tablet) {
-      display: inline;
+      margin: initial;
       width: 430px; 
     }
 
   }
 
   &__sponsors {
-    display: none;
+
+    width: 300px;
+    position: absolute;
+    bottom:-215px;
+    margin: auto;
 
     @media (min-width: $tablet) {
-      display: inline;
       width: 480px;
-      position: absolute;
       bottom:-325px;
       left: 0;
+      margin: initial;
     }
   }
 }

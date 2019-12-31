@@ -21,6 +21,9 @@
     @media (max-width: 958px) {
     margin-left: 0;
     }
+    @media (max-width: 768px) {
+     display: none;
+    }
   }
 
   &__item {

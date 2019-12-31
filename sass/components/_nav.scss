@@ -5,16 +5,18 @@
   text-align: center;
   justify-content: center;
   li:last-child {
-    background-color: #2128BD;
+    //background-color: #2128BD;
+    display: inline-block;
     color: #FAF8F2;
     align-content: flex-end;
-    padding: 5px;
+    //padding: 5px;
     margin-left: 100px;
     text-transform: uppercase;
     a{
       color: rgb(255, 229, 227);
       font-size: 16px;
       font-weight: bold;
+      padding:4px 16px;;
     }
     @media (max-width: 958px) {
     margin-left: 0;

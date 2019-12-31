@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /test.html
 Disallow: /redesign.html
 Disallow: /dev.html
+Disallow: /index-old.html
+Disallow: /code.html

@@ -14,10 +14,14 @@
   </head>
 
   <body>
+    
+  <div id="skip">
+    <a href="#maincontent">Skip to main content</a>
+  </div>
 
-    <header class="header">
+    <header class="header" role="banner">
       <div class="header__inner header--fixed" id="header1">
-        <nav class="nav">
+        <nav class="nav" role="navigation">
           <h1 class="logo"><a href="/"><img alt="NERDS 20 logo" src="/images/NERDS20_Logo_Website.png"></a></h1>
           <ul class="nav__list">
             <li class="nav__item"><a href="#sessions">Sessions</a></li>
@@ -32,6 +36,8 @@
     </header>
 
     <a class="billboard__anchor-link" name="summit"></a>
+
+    <main id="mainconten" role="main">
 
     <section class="billboard billboard--summit">
       <div class="billboard__inner">
@@ -274,7 +280,9 @@
       </div>
     </section>
 
-    <footer class="footer">
+    </main>
+
+    <footer class="footer" role="contentinfo">
       <div class="footer__inner">
         <p><a href="https://nerd.ngo" class="nerd-ngo-link">#NERDS20</a></p>
         <p><a href="/code-of-conduct.html" class="nerd-code-link">NERD Summit 2020 Code of Conduct</a></p>

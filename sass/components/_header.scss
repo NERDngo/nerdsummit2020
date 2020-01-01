@@ -14,7 +14,7 @@
         a{
           text-decoration: none;
           color: black;
-          padding: 25px;       
+          //padding: 25px;       
           @media (max-width: 854px) and (min-width: 767px){
             padding: 15px;
             text-align: left;
@@ -30,8 +30,7 @@
     a{
       text-decoration: none;
       color: black;
-      padding: 25px;
-      
+      //padding: 25px;
     }
   }
 }

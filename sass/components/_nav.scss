@@ -26,12 +26,17 @@
 
   &__item {
     display: inline-block;
+    padding: 0 25px 25px 25px;
     @media (max-width: 1200px) { //was $tablet
      display: none;
     }
     
     a{
       font-weight: lighter;
+      transition: border-bottom .2s;
+      &:hover {
+      border-bottom: solid 3px $nerd-blue--dark;
+      }
     }
   }
 

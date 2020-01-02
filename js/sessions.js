@@ -1,6 +1,10 @@
 
 // Call to function with anonymous callback
 loadJSON(function (response) {
+    if (!window.location.href.includes("dev.html")) {
+        $(".timeslots").remove();
+        return null;
+    }
     const rows = massageData(JSON.parse(response).feed.entry)
     const saturday = rows.filter(row => row.day === "Saturday");
     const sunday = rows.filter(row => row.day === "Sunday");

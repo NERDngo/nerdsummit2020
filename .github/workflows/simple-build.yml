@@ -1,0 +1,11 @@
+name: Build
+
+on: [push]
+
+jobs:
+    build:
+        name: Copy Dev file to index
+        runs-on: ubuntu-latest
+        steps:
+            - name: Copy Command
+              run: cp dev.html index.html  

@@ -2,8 +2,8 @@
 // Call to function with anonymous callback
 loadJSON(function (response) {
     const rows = massageData(JSON.parse(response).feed.entry)
-    const saturday = rows.filter(row => row.day === "Saturday");
-    const sunday = rows.filter(row => row.day === "Sunday");
+    const saturday = rows.filter(row => row.day === "1");
+    const sunday = rows.filter(row => row.day === "2");
     createSessionList("Saturday", saturday);
     createSessionList("Sunday", sunday);
 

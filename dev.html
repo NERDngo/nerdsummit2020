@@ -84,7 +84,7 @@
           <div class="timeslot day-1">
             <h3 class="billboard__subheader" class="day">FRIDAY MARCH 20</h3>
             <div class="inner">
-              <div id="Saturday"></div>
+              <div id="Day-1"></div>
             </div>
           </div>
           <div class="timeslots-spacer"></div>
@@ -92,7 +92,7 @@
           <div class="timeslot day-2">
             <h3 class="billboard__subheader" class="day">SATURDAY MARCH 21</h3>
             <div class="inner">
-              <div id="Sunday"></div>
+              <div id="Day-2"></div>
             </div>
           </div>
         </div>
@@ -333,16 +333,16 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/sessions.js?ver=2"></script>
+    <script src="js/sessions.js?ver=3"></script>
 
     <script language="javascript" type="text/javascript">
       $(document).ready(function () {
-        $('#Saturday').on('click', '.top', function () {
+        $('#Day-1').on('click', '.top', function () {
           $(this).next().slideToggle();
           $(this).find('.top-control .plus').toggleClass('hide');
           $(this).find('.top-control .minus').toggleClass('hide');
         });
-        $('#Sunday').on('click', '.top', function () {
+        $('#Day-2').on('click', '.top', function () {
           $(this).next().slideToggle();
           $(this).find('.top-control .plus').toggleClass('hide');
           $(this).find('.top-control .minus').toggleClass('hide');

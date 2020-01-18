@@ -2,10 +2,10 @@
 // Call to function with anonymous callback
 loadJSON(function (response) {
     const rows = massageData(JSON.parse(response).feed.entry)
-    const saturday = rows.filter(row => row.day === "1");
-    const sunday = rows.filter(row => row.day === "2");
-    createSessionList("Saturday", saturday);
-    createSessionList("Sunday", sunday);
+    const day1 = rows.filter(row => row.day === "1");
+    const day2 = rows.filter(row => row.day === "2");
+    createSessionList("Day-1", day1);
+    createSessionList("Day-2", day2);
 
 });
 

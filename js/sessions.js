@@ -1,6 +1,11 @@
 
 // Call to function with anonymous callback
 loadJSON(function (response) {
+    //  COMMENT THIS OUT TO GO LIVE WITH SESSIONS
+    if (!window.location.href.includes("dev.html")) {
+        $(".timeslots").remove();
+        return null;
+    }
     const rows = massageData(JSON.parse(response).feed.entry)
     const day1 = rows.filter(row => row.day === "1");
     const day2 = rows.filter(row => row.day === "2");

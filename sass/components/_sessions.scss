@@ -61,10 +61,26 @@
     }
     .time {
       display: inline-block;
+      font-size: 18px;
+      strong {
+        font-weight: 700;
+      }
     }
     .room {
       margin-left: 20px;
       display: inline-block;
+      font-size: 18px;
+      label {
+        font-size: 16px;
+      }
+    }
+    .tags {
+      margin-left: 20px;
+      display: inline-block;
+      font-size: 18px;
+      label {
+        font-size: 16px;
+      }
     }
     .info {
       display: none;

@@ -69,8 +69,8 @@ function createSessionList(dayId, sessions) {
                 <div class="title"><h4 class="name">${session.name}</h4></div>
                 <p class="speaker">${session.speaker}</p>
                 <div class="time"> ${session.start} - ${session.end} </div>
-                <div class="room"><label>Room:</label> ${session.room} </div>
-                <div class="tags"><label>Track:</label> ${session.type} </div>
+                <div class="room">${session.room} </div>
+                <div class="tags">${session.type} </div>
             </div>
             <div class="top-control">
                 <span class="plus">+</span><span class="minus hide">-</span>

@@ -60,7 +60,7 @@ function createSessionList(dayId, sessions) {
     })
 
     function sessionTemplate(session) {
-        const speakerLink = session.speakerLink ? `<a href="${session.speakerLink}" class="speaker-link">About this speaker</a>` : null;
+        const speakerLink = session.speakerLink ? `<a href="${session.speakerLink}" class="speaker-link">Link to speaker info</a>` : null;
         const slideLink = session.slideLink ? `<a href="${session.slideLink}" class="slides-link">Link to slides</a>` : null;
         const seperator = session.slideLink && session.speakerLink ? `<span> | </span>` : null;
         return sanitize`

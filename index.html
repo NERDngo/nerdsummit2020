@@ -357,14 +357,20 @@
     <script language="javascript" type="text/javascript">
       $(document).ready(function () {
         $('#Day-1').on('click', '.top', function () {
-          $(this).next().slideToggle();
-          $(this).find('.top-control .plus').toggleClass('hide');
-          $(this).find('.top-control .minus').toggleClass('hide');
+          var $this = $(this);
+          $(this).next().slideToggle(function () {
+            history.replaceState(null, null, $(this).is(':visible') ? ('#' + $this.attr('id')) : ' ');
+          });
+          $this.find('.top-control .plus').toggleClass('hide');
+          $this.find('.top-control .minus').toggleClass('hide');          
         });
         $('#Day-2').on('click', '.top', function () {
-          $(this).next().slideToggle();
-          $(this).find('.top-control .plus').toggleClass('hide');
-          $(this).find('.top-control .minus').toggleClass('hide');
+          var $this = $(this);
+          $(this).next().slideToggle(function () {
+            history.replaceState(null, null, $(this).is(':visible') ? ('#' + $this.attr('id')) : ' ');
+          });
+          $this.find('.top-control .plus').toggleClass('hide');
+          $this.find('.top-control .minus').toggleClass('hide');
         });
       });
     </script>

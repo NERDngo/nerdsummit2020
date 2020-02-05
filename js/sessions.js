@@ -12,6 +12,16 @@ loadJSON(function (response) {
     createSessionList("Day-1", day1);
     createSessionList("Day-2", day2);
 
+    setTimeout(function () {
+        var hash = window.location.hash;
+        if (hash) {
+            var $sessionId = $('.top' + hash);
+            $sessionId.click();
+            $('html, body').animate({
+                scrollTop: $sessionId.offset().top - 120 //Minus header + shadow
+            }, 300);
+        }
+    }, 100);
 });
 
 // see https://stackoverflow.com/a/34908037/5855010

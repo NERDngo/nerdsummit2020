@@ -358,7 +358,7 @@
       $(document).ready(function () {
         $('#Day-1').on('click', '.top', function () {
           var $this = $(this);
-          $(this).next().slideToggle(function () {
+          $this.next().slideToggle(function () {
             history.replaceState(null, null, $(this).is(':visible') ? ('#' + $this.attr('id')) : ' ');
           });
           $this.find('.top-control .plus').toggleClass('hide');
@@ -366,7 +366,7 @@
         });
         $('#Day-2').on('click', '.top', function () {
           var $this = $(this);
-          $(this).next().slideToggle(function () {
+          $this.next().slideToggle(function () {
             history.replaceState(null, null, $(this).is(':visible') ? ('#' + $this.attr('id')) : ' ');
           });
           $this.find('.top-control .plus').toggleClass('hide');

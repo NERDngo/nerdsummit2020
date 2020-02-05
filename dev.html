@@ -80,11 +80,10 @@
           
           <!--BEGIN SESSIONS-->
           <div class="timeslots">
-          
           <!--BEGIN DAY 1-->
             <div class="timeslot day-1">
               <h3 class="billboard__subheader" class="day">FRIDAY MARCH 20</h3>
-              <p>Session schedule is tentative.</p>
+              <p>Session schedule is tentative. <br>Coffee sponsored by Last Call Media. <br>Healthy snacks sponsored by Common Media.</p>              
               <div class="inner">
                 <div id="Day-1"></div>
               </div>
@@ -93,12 +92,38 @@
             <!--BEGIN DAY 2-->
             <div class="timeslot day-2">
               <h3 class="billboard__subheader" class="day">SATURDAY MARCH 21</h3>
-              <p>Session schedule is tentative.</p>
+              <p>Session schedule is tentative. <br>Coffee sponsored by Last Call Media. <br>Healthy snacks sponsored by Common Media.</p>
               <div class="inner">
                 <div id="Day-2"></div>
               </div>
             </div>
           </div>   <!-- end timeslots -->
+
+          <div id="hackathon">
+            <h4>NERDS2020 Hackathon</h4>
+            <p>NERDS2020 Hackathon will take place on Sunday, March 22nd from 9am to 4pm EST and will be located at the Integrated Sciences Building at UMass Amherst </p>
+            <p>Do you like to code?  Do you want to code?  Have you tried to learn to code only to not know how to get started? </p>
+            <p>Using JavaScript, Python, and maybe a Raspberry Pi or two, beginner programmers and professionals (ages 8 and up) will have opportunities to learn practical programming skills and participate in building real-world applications with mentors in a group setting.  </p>
+            <p>Come join us for a day of networking, learning, and practical hacking -- make new friends, sharpen your skills and develop new ones in a fun and encouraging setting.  Sign-up is <a href="https://ace.atlassian.com/events/details/atlassian-northampton-presents-hackathon-at-nerd-summit/#/">here</a>.</p>
+              <div id="hackathon-sponsor">
+                <p>Sponsored by:</p>
+                <a href="https://www.atlassian.com/" target="blank"><img src="images/atlassian.png" alt="Logo for Atlassian"></a>  
+              </div>
+            <p class="center-text">Thanks to our community partners for their support in organizing this event:<p>
+              <div id="hackathon-partners">
+                <div class="hackathon-partner"></div>
+                <div class="hackathon-partner">
+                <a href="https://holyokecodes.org/" target="blank"><img src="images/holyoke_codes.jpg" alt="Logo for Holyoke Codes"></a> 
+                </div>  
+                <div class="hackathon-partner">
+                <a href="https://www.hackher413.com/" target="blank"><img src="images/2020hackher_logo.png" alt="Logo for OPTASY"></a>   
+                </div>                             
+                <div class="hackathon-partner">
+                <a href="https://www.facebook.com/HackForWesternMass/" target="blank"><img src="images/hack_for_western_mass.png" alt="Logo for Hack for Western Mass"></a> 
+                </div>
+                <div class="hackathon-partner"></div>
+              </div>
+          </div>
 
       </div>  <!-- end billboard__inner -->
       <a class="billboard__anchor-link" name="location"></a>
@@ -173,6 +198,8 @@
           <!-- <a href="https://justpeachy.io/" target="blank"><img src="images/just-peachy.jpg" alt="Logo for Just Peachy"></a><br> -->
           <!-- <a href="https://www.acquia.com/" target="blank"><img src="images/acquia-logo.png" alt="Logo for Acquia"></a> -->
           <!-- <a href="https://www.cics.umass.edu/" target="blank"><img src="images/UMass_CICS.jpg" alt="Logo for UMass College of Information and Computer Sciences (CICS)."></a> -->
+
+
         </div>
 
         <ul class="billboard__button-container">
@@ -240,7 +267,7 @@
               </ul>
 
             <h5>Video:</h5>
-              <p>Session video capture is headed up by Abby Bowman this year. <br>Many thanks to Kevin Thull for support.<br>
+               <p>Session video capture is headed up by Abby Bowman this year. <br>Many thanks to Kevin Thull for support.<br>
               <a href="https://www.kevinthull.com/" target="blank">www.kevinthull.com</a></p>
             </div>
 
@@ -308,7 +335,6 @@
 
     </main>
 
-
     <footer class="footer" role="contentinfo">
       <div class="footer__inner">
         <p><a href="https://nerd.ngo" class="nerd-ngo-link">#NERDS20</a></p>
@@ -352,19 +378,25 @@
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/sessions.js?ver=2"></script>
+    <script src="js/sessions.js?ver=1"></script>
 
     <script language="javascript" type="text/javascript">
       $(document).ready(function () {
         $('#Day-1').on('click', '.top', function () {
-          $(this).next().slideToggle();
-          $(this).find('.top-control .plus').toggleClass('hide');
-          $(this).find('.top-control .minus').toggleClass('hide');
+          var $this = $(this);
+          $this.next().slideToggle(function () {
+            history.replaceState(null, null, $(this).is(':visible') ? ('#' + $this.attr('id')) : ' ');
+          });
+          $this.find('.top-control .plus').toggleClass('hide');
+          $this.find('.top-control .minus').toggleClass('hide');          
         });
         $('#Day-2').on('click', '.top', function () {
-          $(this).next().slideToggle();
-          $(this).find('.top-control .plus').toggleClass('hide');
-          $(this).find('.top-control .minus').toggleClass('hide');
+          var $this = $(this);
+          $this.next().slideToggle(function () {
+            history.replaceState(null, null, $(this).is(':visible') ? ('#' + $this.attr('id')) : ' ');
+          });
+          $this.find('.top-control .plus').toggleClass('hide');
+          $this.find('.top-control .minus').toggleClass('hide');
         });
       });
     </script>

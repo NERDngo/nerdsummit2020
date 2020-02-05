@@ -96,4 +96,45 @@
       margin-bottom: 5px;
     }
   }
+
+  #hackathon {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    h4 {
+    text-transform: none;
+    font-weight: 700;
+    color: #c61a40;
+    margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    #hackathon-sponsor {
+      text-align: center;
+      img {
+        display: block;
+        margin: auto;
+        width: 50%;
+      }
+    }
+    #hackathon-partners {
+      text-align: center;
+      display: flex;
+      flex-direction: horizontal;
+      flex-wrap: nowrap;
+      .hackathon-partner {
+        width: 20%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    p.center-text {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
 }

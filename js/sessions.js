@@ -12,16 +12,17 @@ loadJSON(function (response) {
     createSessionList("Day-1", day1);
     createSessionList("Day-2", day2);
 
-    setTimeout(function () {
-        var hash = window.location.hash;
-        if (hash) {
-            var $sessionId = $('.top' + hash);
-            $sessionId.click();
-            $('html, body').animate({
-                scrollTop: $sessionId.offset().top - 120 //Minus header + shadow
-            }, 300);
+    var hash = window.location.hash;
+    if (hash) {
+        var $session = $(hash);
+        if (!$session.length) {
+            return;
         }
-    }, 100);
+        $session.click();
+        $('html, body').animate({
+            scrollTop: $session.offset().top - 120 //Minus header + shadow
+        }, 300);
+    }
 });
 
 // see https://stackoverflow.com/a/34908037/5855010
@@ -83,7 +84,7 @@ function createSessionList(dayId, sessions) {
                 <div class="tags">${session.type} </div>
             </div>
             <div class="top-control">
-                <span class="plus">+</span><span class="minus hide">-</span>
+                <a href="/#${session.id}" onClick="function(e) {e.preventDefault(); return false;}"><span class="plus">+</span><span class="minus hide">-</span></a>
             </div>
         </div>
         <div class="info">

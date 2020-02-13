@@ -84,7 +84,29 @@
     }
 
     img {
-      margin-bottom: 60px;
+      //margin-bottom: 60px;
+    }
+    .sponsor {
+      width: 300px;
+      margin-left: 20px;
+      margin-right: 20px;
+      text-align: center;
+      a:not(.billboard__button) {
+        font-size: 12px;
+        font-weight: 900;
+        color: #999;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: border-bottom .2s;
+        &:hover {
+          border-bottom: solid 3px $nerd-blue--dark;
+          color: black;
+        }
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 
@@ -144,6 +166,14 @@
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 20px;
+    &--sponsor {
+       font-size: 24px;
+       font-weight: 600;
+       margin-bottom: 0px;
+       @media (min-width: $tablet) {
+      font-size: 30px;
+      }
+    }
 
     @media (min-width: $tablet) {
       font-size: 30px;
@@ -222,7 +252,18 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 30px;
+    a {
+      margin: 0 20px;
+    }
+  }
 
+  &__wrapper--sponsor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-bottom: 50px;
     a {
       margin: 0 20px;
     }

@@ -10,7 +10,7 @@
   }
   &__inner {
     height: 110px; //80px;  
-    @media (max-width: 600px) {
+    @media (max-width: 767px) {
       height: 130px;   
     }
     width: 100%;

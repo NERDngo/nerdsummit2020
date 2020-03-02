@@ -31,3 +31,14 @@ html {
     background: #ffc;
     border:1px solid #990000;
     }
+
+#notice {
+  height: 30px;
+  background: #000;
+  color: #FFF;
+  font-size: 14px;
+  padding-top: 5px;
+  @media (max-width: 600px) {
+  font-size: 13px;
+  }
+}    

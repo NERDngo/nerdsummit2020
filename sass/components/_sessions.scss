@@ -137,4 +137,25 @@
       text-align: center;
     }
   }
+
+  #virtual {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    h4 {
+    text-transform: none;
+    font-weight: 700;
+    color: #c61a40;
+    margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    p.center-text {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
 }
